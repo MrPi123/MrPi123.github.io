@@ -7,14 +7,17 @@
   
   <title>recyclerView 嵌套ScrollerView 小bug | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="由于嵌套导致的recyclerview的item需要点击两次才能触发事件 123456789101112&amp;lt;androidx.core.widget.NestedScrollView    android:layout_width=&quot;match_parent&quot;    android:layout_height=&quot;match_parent&quot;    android:layout_marginBot">
+<meta property="og:type" content="article">
 <meta property="og:title" content="recyclerView 嵌套ScrollerView 小bug">
 <meta property="og:url" content="http://yoursite.com/2018/12/20/recyclerView-嵌套ScrollerView-小bug/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="由于嵌套导致的recyclerview的item需要点击两次才能触发事件 123456789101112&amp;lt;androidx.core.widget.NestedScrollView    android:layout_width=&quot;match_parent&quot;    android:layout_height=&quot;match_parent&quot;    android:layout_marginBot">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-20T04:50:37.125Z">
+<meta property="og:updated_time" content="2018-12-20T04:58:36.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="recyclerView 嵌套ScrollerView 小bug">
+<meta name="twitter:description" content="由于嵌套导致的recyclerview的item需要点击两次才能触发事件 123456789101112&amp;lt;androidx.core.widget.NestedScrollView    android:layout_width=&quot;match_parent&quot;    android:layout_height=&quot;match_parent&quot;    android:layout_marginBot">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -83,7 +86,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>由于嵌套导致的recyclerview的item需要点击两次才能触发事件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.core.widget.NestedScrollView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_marginBottom</span>=<span class="string">"@dimen/dp_48"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">androidx.recyclerview.widget.RecyclerView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:nestedScrollingEnabled</span>=<span class="string">"false"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">"@+id/rv_item"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.core.widget.NestedScrollView</span>&gt;</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
